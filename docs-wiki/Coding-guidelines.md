@@ -4,6 +4,7 @@ On this page:
 
 - [ℹ️ General guidelines](#ℹ️-general-guidelines)
 - [🔤 Content (strings and microcopy)](#-content-strings-and-microcopy)
+- [🎨 Design](#-design)
 
 ---
 
@@ -41,5 +42,11 @@ We adhere to the [Microsoft style guide](https://docs.microsoft.com/style-guide/
 - Revise weak writing
 
 [Learn more](https://docs.microsoft.com/style-guide/welcome)
+
+<br>
+
+## 🎨 Design
+
+The color we use for FinOps is #6f4bb2. For variations and related colors, see [Royal Lavender on ColorKit](https://colorkit.co/color/6f4bb2).
 
 <br>

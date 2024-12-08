@@ -442,6 +442,22 @@ table CommitmentDiscountCosts
 
 		annotation SummarizationSetBy = Automatic
 
+	column x_CommitmentDiscountSkuMeterCategory
+		dataType: string
+		lineageTag: 4bc25ba8-6199-47ef-8e09-5d546ecf8d43
+		summarizeBy: none
+		sourceColumn: x_CommitmentDiscountSkuMeterCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column x_CommitmentDiscountSkuMeterSubcategory
+		dataType: string
+		lineageTag: 7c25eac8-9371-4af7-aa9e-7cf5d8de2e04
+		summarizeBy: none
+		sourceColumn: x_CommitmentDiscountSkuMeterSubcategory
+
+		annotation SummarizationSetBy = Automatic
+
 	partition CommitmentDiscountCosts = m
 		mode: import
 		queryGroup: 'Data Explorer'
@@ -500,8 +516,10 @@ table CommitmentDiscountCosts
 								        EffectiveCost = sum(EffectiveCost),
 								        ListCost = sum(ListCost),
 								        PricingQuantity = sum(PricingQuantity),
-								        x_CommitmentDiscountServiceCategory = arraystring(make_set_if(ServiceCategory, ServiceCategory != 'Other')),
-								        x_CommitmentDiscountServiceName = arraystring(make_set(ServiceName)),
+								        x_CommitmentDiscountServiceCategory     = arraystring(make_set_if(iff(ProviderName == 'Microsoft' and CommitmentDiscountCategory == 'Spend', 'Compute', ServiceCategory),       ServiceCategory != 'Other')),
+								        x_CommitmentDiscountServiceName         = arraystring(make_set_if(iff(ProviderName == 'Microsoft' and CommitmentDiscountCategory == 'Spend', 'Compute', ServiceName),           isnotempty(ServiceName))),
+								        x_CommitmentDiscountSkuMeterCategory    = arraystring(make_set_if(iff(ProviderName == 'Microsoft' and CommitmentDiscountCategory == 'Spend', 'Compute', x_SkuMeterCategory),    isnotempty(x_SkuMeterCategory))),
+								        x_CommitmentDiscountSkuMeterSubcategory = arraystring(make_set_if(iff(ProviderName == 'Microsoft' and CommitmentDiscountCategory == 'Spend', 'Compute', x_SkuMeterSubcategory), isnotempty(x_SkuMeterSubcategory))),
 								        x_ResourceCount = dcountif(ResourceId, x_ResourceType !startswith 'microsoft.billingbenefits' and x_ResourceType !startswith 'microsoft.capacity/reservation'),
 								        x_UsageCPUHours = sum(x_UsageCPUHours)
 								        by
@@ -569,12 +587,10 @@ table CommitmentDiscountCosts
 								        SubAccountId,
 								        SubAccountName,
 								        x_CommitmentDiscountKey,
-								        x_CommitmentDiscountServiceCategory = case(
-								            ProviderName == 'Microsoft' and CommitmentDiscountCategory == 'Spend', 'Compute',
-								            isempty(x_CommitmentDiscountServiceCategory), 'Other',
-								            x_CommitmentDiscountServiceCategory
-								        ),
-								        x_CommitmentDiscountServiceName = iff(ProviderName == 'Microsoft' and CommitmentDiscountCategory == 'Spend', 'Compute', x_CommitmentDiscountServiceName),
+								        x_CommitmentDiscountServiceCategory = x_CommitmentDiscountServiceCategory,
+								        x_CommitmentDiscountServiceName,
+										x_CommitmentDiscountSkuMeterCategory,
+										x_CommitmentDiscountSkuMeterSubcategory,
 								        x_CommitmentDiscountUtilizationAmount,
 								        x_CommitmentDiscountUtilizationPotential,
 								        x_ChargePeriodMonth,

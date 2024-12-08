@@ -18555,9 +18555,866 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "commitment_discount_usage.x_commitment_discount_sku_meter_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CommitmentDiscountCosts",
+			          "ConceptualProperty": "x_CommitmentDiscountSkuMeterCategory"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x commitment discount sku meter category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "x_CommitmentDiscountSkuMeterCategory": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "meter category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sku meter category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount sku meter category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount sku meter category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount sku meter classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "discount sku meter classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "sku meter classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "commitment discount sku meter class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "commitment discount sku meter group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "commitment discount sku meter type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "commitment discount sku meter grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "commitment discount sku meter kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "meter classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "discount sku meter class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "commitment_discount_usage.x_commitment_discount_sku_meter_subcategory": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CommitmentDiscountCosts",
+			          "ConceptualProperty": "x_CommitmentDiscountSkuMeterSubcategory"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x commitment discount sku meter subcategory": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "x_CommitmentDiscountSkuMeterSubcategory": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "subcategory": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "meter subcategory": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sku meter subcategory": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount sku meter subcategory": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount sku meter subcategory": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost.commitment_discount_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HybridBenefitCosts",
+			          "ConceptualProperty": "CommitmentDiscountCategory"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "commitment discount category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CommitmentDiscountCategory": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "discount classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "commitment discount class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "discount class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "discount group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "discount grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost.commitment_discount_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HybridBenefitCosts",
+			          "ConceptualProperty": "CommitmentDiscountId"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "commitment discount id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CommitmentDiscountId": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "discount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "commitment discount identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "commitment discount identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "discount identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "discount identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "discount identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "commitment discount credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "discount credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "commitment reduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "commitment markdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost.commitment_discount_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HybridBenefitCosts",
+			          "ConceptualProperty": "CommitmentDiscountName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "commitment discount name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CommitmentDiscountName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "discount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "discount nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "discount title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "discount label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "discount tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "commitment reduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "commitment markdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost.commitment_discount_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HybridBenefitCosts",
+			          "ConceptualProperty": "CommitmentDiscountType"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "commitment discount type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CommitmentDiscountType": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "commitment discount genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "commitment discount manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "commitment discount variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "discount genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "discount manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "discount variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "commitment discount brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commitment discount style": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "hybrid_benefit_cost_has_x_resource_group_name": {
+			      "Binding": {
+			        "ConceptualEntity": "HybridBenefitCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hybrid_benefit_cost": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost"
+			          }
+			        },
+			        "hybrid_benefit_cost.x_resource_group_name": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost.x_resource_group_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hybrid_benefit_cost"
+			            },
+			            "Object": {
+			              "Role": "hybrid_benefit_cost.x_resource_group_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hybrid_benefit_costs_have_x_resource_group_names"
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost_has_x_reporting_date": {
+			      "Binding": {
+			        "ConceptualEntity": "HybridBenefitCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hybrid_benefit_cost": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost"
+			          }
+			        },
+			        "hybrid_benefit_cost.x_reporting_date": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost.x_reporting_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hybrid_benefit_cost"
+			            },
+			            "Object": {
+			              "Role": "hybrid_benefit_cost.x_reporting_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hybrid_benefit_costs_have_x_reporting_dates"
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost_has_x_negotiated_discount_savings": {
+			      "Binding": {
+			        "ConceptualEntity": "HybridBenefitCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hybrid_benefit_cost": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost"
+			          }
+			        },
+			        "hybrid_benefit_cost.x_negotiated_discount_savings": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost.x_negotiated_discount_savings"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hybrid_benefit_cost"
+			            },
+			            "Object": {
+			              "Role": "hybrid_benefit_cost.x_negotiated_discount_savings"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hybrid_benefit_costs_have_x_negotiated_discount_savings"
+			        }
+			      ]
+			    },
 			    "hybrid_benefit_cost_has_x_commitment_discount_savings": {
 			      "Binding": {
 			        "ConceptualEntity": "HybridBenefitCosts"
@@ -23490,105 +24347,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "hybrid_benefit_cost_has_x_negotiated_discount_savings": {
-			      "Binding": {
-			        "ConceptualEntity": "HybridBenefitCosts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hybrid_benefit_cost": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost"
-			          }
-			        },
-			        "hybrid_benefit_cost.x_negotiated_discount_savings": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost.x_negotiated_discount_savings"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hybrid_benefit_cost"
-			            },
-			            "Object": {
-			              "Role": "hybrid_benefit_cost.x_negotiated_discount_savings"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hybrid_benefit_costs_have_x_negotiated_discount_savings"
-			        }
-			      ]
-			    },
-			    "hybrid_benefit_cost_has_x_reporting_date": {
-			      "Binding": {
-			        "ConceptualEntity": "HybridBenefitCosts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hybrid_benefit_cost": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost"
-			          }
-			        },
-			        "hybrid_benefit_cost.x_reporting_date": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost.x_reporting_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hybrid_benefit_cost"
-			            },
-			            "Object": {
-			              "Role": "hybrid_benefit_cost.x_reporting_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hybrid_benefit_costs_have_x_reporting_dates"
-			        }
-			      ]
-			    },
-			    "hybrid_benefit_cost_has_x_resource_group_name": {
-			      "Binding": {
-			        "ConceptualEntity": "HybridBenefitCosts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hybrid_benefit_cost": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost"
-			          }
-			        },
-			        "hybrid_benefit_cost.x_resource_group_name": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost.x_resource_group_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hybrid_benefit_cost"
-			            },
-			            "Object": {
-			              "Role": "hybrid_benefit_cost.x_resource_group_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hybrid_benefit_costs_have_x_resource_group_names"
-			        }
-			      ]
-			    },
 			    "hybrid_benefit_cost_has_x_resource_machine_name": {
 			      "Binding": {
 			        "ConceptualEntity": "HybridBenefitCosts"
@@ -23853,6 +24611,138 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "hybrid_benefit_cost_has_service_name": {
+			      "Binding": {
+			        "ConceptualEntity": "HybridBenefitCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hybrid_benefit_cost": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost"
+			          }
+			        },
+			        "hybrid_benefit_cost.service_name": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost.service_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hybrid_benefit_cost"
+			            },
+			            "Object": {
+			              "Role": "hybrid_benefit_cost.service_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hybrid_benefit_costs_have_service_names"
+			        }
+			      ]
+			    },
+			    "hybrid_benefit_cost_has_service_category": {
+			      "Binding": {
+			        "ConceptualEntity": "HybridBenefitCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hybrid_benefit_cost": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost"
+			          }
+			        },
+			        "hybrid_benefit_cost.service_category": {
+			          "Target": {
+			            "Entity": "hybrid_benefit_cost.service_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hybrid_benefit_cost"
+			            },
+			            "Object": {
+			              "Role": "hybrid_benefit_cost.service_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hybrid_benefit_costs_have_service_categories"
+			        }
+			      ]
+			    },
+			    "commitment_discount_usage_has_x_commitment_discount_sku_meter_category": {
+			      "Binding": {
+			        "ConceptualEntity": "CommitmentDiscountCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "commitment_discount_usage": {
+			          "Target": {
+			            "Entity": "commitment_discount_usage"
+			          }
+			        },
+			        "commitment_discount_usage.x_commitment_discount_sku_meter_category": {
+			          "Target": {
+			            "Entity": "commitment_discount_usage.x_commitment_discount_sku_meter_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "commitment_discount_usage"
+			            },
+			            "Object": {
+			              "Role": "commitment_discount_usage.x_commitment_discount_sku_meter_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "commitment_discount_costs_have_x_commitment_discount_sku_meter_categories"
+			        }
+			      ]
+			    },
+			    "commitment_discount_usage_has_x_commitment_discount_sku_meter_subcategory": {
+			      "Binding": {
+			        "ConceptualEntity": "CommitmentDiscountCosts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "commitment_discount_usage": {
+			          "Target": {
+			            "Entity": "commitment_discount_usage"
+			          }
+			        },
+			        "commitment_discount_usage.x_commitment_discount_sku_meter_subcategory": {
+			          "Target": {
+			            "Entity": "commitment_discount_usage.x_commitment_discount_sku_meter_subcategory"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "commitment_discount_usage"
+			            },
+			            "Object": {
+			              "Role": "commitment_discount_usage.x_commitment_discount_sku_meter_subcategory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "commitment_discount_costs_have_x_commitment_discount_sku_meter_subcategories"
+			        }
+			      ]
+			    },
 			    "hybrid_benefit_cost_has_commitment_discount_category": {
 			      "Binding": {
 			        "ConceptualEntity": "HybridBenefitCosts"
@@ -23982,72 +24872,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "hybrid_benefit_costs_have_commitment_discount_types"
-			        }
-			      ]
-			    },
-			    "hybrid_benefit_cost_has_service_name": {
-			      "Binding": {
-			        "ConceptualEntity": "HybridBenefitCosts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hybrid_benefit_cost": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost"
-			          }
-			        },
-			        "hybrid_benefit_cost.service_name": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost.service_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hybrid_benefit_cost"
-			            },
-			            "Object": {
-			              "Role": "hybrid_benefit_cost.service_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hybrid_benefit_costs_have_service_names"
-			        }
-			      ]
-			    },
-			    "hybrid_benefit_cost_has_service_category": {
-			      "Binding": {
-			        "ConceptualEntity": "HybridBenefitCosts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hybrid_benefit_cost": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost"
-			          }
-			        },
-			        "hybrid_benefit_cost.service_category": {
-			          "Target": {
-			            "Entity": "hybrid_benefit_cost.service_category"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hybrid_benefit_cost"
-			            },
-			            "Object": {
-			              "Role": "hybrid_benefit_cost.service_category"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hybrid_benefit_costs_have_service_categories"
 			        }
 			      ]
 			    },
