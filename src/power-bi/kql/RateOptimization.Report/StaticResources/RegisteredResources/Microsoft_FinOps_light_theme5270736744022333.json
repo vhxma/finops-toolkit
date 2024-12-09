@@ -1,0 +1,48 @@
+{
+  "name": "Microsoft FinOps light theme",
+  "dataColors": [
+    "#6F4BB2",
+    "#0078D4",
+    "#EF6950",
+    "#3449AA",
+    "#00A2AD",
+    "#733569",
+    "#E3008C",
+    "#335C50"
+  ],
+  "visualStyles": {
+    "*": {
+      "*": {
+        "visualTooltip": [
+          {
+            "titleFontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ],
+        "outspacePane": [
+          {
+            "checkboxAndApplyColor": {
+              "solid": {
+                "color": "#6F4BB2"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "bad": "#E00B1C",
+  "neutral": "#DB7500",
+  "good": "#57A300",
+  "minimum": "#EFEDF8",
+  "center": "#FFCA8A",
+  "maximum": "#8970C3"
+}

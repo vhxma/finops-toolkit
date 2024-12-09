@@ -21,6 +21,7 @@ Sorry to hear you're having a problem. We're here to help!
 - [DataExplorerPostIngestionDropFailed](#dataexplorerpostingestiondropfailed)
 - [DataExplorerPreIngestionDropFailed](#dataexplorerpreingestiondropfailed)
 - [HubDataNotFound](#hubdatanotfound)
+- [IngestionFilesNotFound](#ingestionfilesnotfound)
 - [InvalidEffectiveCost](#invalideffectivecost)
 - [InvalidExportContainer](#invalidexportcontainer)
 - [InvalidExportVersion](#invalidexportversion)
@@ -34,7 +35,6 @@ Sorry to hear you're having a problem. We're here to help!
 - [MissingListUnitPrice](#missinglistunitprice)
 - [MissingProviderName](#missingprovidername)
 - [ManifestReadFailed](#manifestreadfailed)
-- [RerunFilesNotFound](#rerunfilesnotfound)
 - [ResourceAccessForbiddenException](#resourceaccessforbiddenexception)
 - [RoleAssignmentUpdateNotPermitted](#roleassignmentupdatenotpermitted)
 - [SchemaLoadFailed](#schemaloadfailed)
@@ -48,8 +48,6 @@ Sorry to hear you're having a problem. We're here to help!
 - [x\_PricingSubcategory shows the commitment discount ID](#x_pricingsubcategory-shows-the-commitment-discount-id)
 - [Power BI: Reports are missing data for specific dates](#power-bi-reports-are-missing-data-for-specific-dates)
 - [Power BI: Reports are empty (no data)](#power-bi-reports-are-empty-no-data)
-  - [FinOps hubs: Ingestion container is empty](#finops-hubs-ingestion-container-is-empty)
-  - [FinOps hubs: Files available in the ingestion container](#finops-hubs-files-available-in-the-ingestion-container)
 - [Power BI: The remote name could not be resolved: '\<storage-account\>.dfs.core.windows.net'](#power-bi-the-remote-name-could-not-be-resolved-storage-accountdfscorewindowsnet)
 - [Power BI: We cannot convert the value null to type Logical](#power-bi-we-cannot-convert-the-value-null-to-type-logical)
 - [FinOps hubs: We cannot convert the value null to type Table](#finops-hubs-we-cannot-convert-the-value-null-to-type-table)
@@ -157,6 +155,16 @@ For more details and debugging steps, see [Validate your FinOps hub deployment](
 
 <br>
 
+## IngestionFilesNotFound
+
+<sup>Severity: Critical</sup>
+
+Unable to locate parquet files to ingest from the specified folder path.
+
+**Mitigation**: Confirm the folder path is the full path, including the **ingestion** container and not starting with or ending with a slash (**/**). Copy the path from the last successful **ingestion_ExecuteETL** pipeline run.
+
+<br>
+
 ## InvalidEffectiveCost
 
 <sup>Severity: Major</sup>
@@ -221,9 +229,17 @@ Exports were not found in the specified storage path.
 
 <sup>Severity: Informational</sup>
 
-This error code is shown in the `x_SourceChanges` column when the ingested data uses an older version of FOCUS. FinOps hubs converts data to the latest FOCUS version so this should not cause an issue; however, the modernization transform cannot account for all scenarios and may result in unexpected results in some cases. Refer to documentation for known issues.
+This error code is shown when the ingested data uses an older version of FOCUS. When found in the `x_SourceChanges` column, the code is informational only. When shown in Power BI storage reports when the CostDetails query fails to load, this means the **Deprecated: Perform Extra Query Optimizations** parameter is disabled.
 
-**Mitigation**: Update configured exports to use the latest FOCUS version. If the latest FOCUS version is not supported by the provider, please request official support for the latest FOCUS version.
+FinOps hubs converts data to the latest FOCUS version so this should not cause an issue; however, the modernization transform cannot account for all scenarios and may result in unexpected results in some cases. Refer to documentation for known issues.
+
+**Mitigation**: There are several ways to mitigate this message, depending on which tool you're using.
+
+If using FinOps hubs with Data Explorer and seeing this in the `x_SourceChanges` column of the Costs table or related functions, update Cost Management cost exports to use the latest FOCUS version. No additional changes need to be made &nbsp; all data will be merged during Data Explorer ingestion.
+
+If using storage reports and seeing this in the `x_SourceChanges` column of the CostDetails query, this message is a warning that this FOCUS version will be removed in a future update. While you can safely ignore this message, it will require an update in a future release. To avoid the message, update Cost Management exports to the latest FOCUS version, delete or move any older data using an older FOCUS version, and reexport historical data. If using FinOps hubs, delete or move data outside of the **ingestion** container. If hosting your own exports in storage, change the **Storage URL** parameter to a different folder path that does not include older FOCUS versions.
+
+As of FinOps toolkit 0.7, support for older FOCUS versions has been deprecated to improve performance and scalability. We recommend updating to the latest FOCUS version and reexporting data to improve your experience. Set the **Deprecated: Perform Extra Query Optimizations** parameter to `TRUE` to ensure older FOCUS versions are supported and set it to `FALSE` to speed up performance and support larger datasets covering more cost or time. As of 0.7, this parameter is enabled by default for backwards compatibility. In FinOps toolkit 0.8, it will be disabled by default, but still available for backwards compatibility until on or after June 2025. If you cannot move off of old FOCUS versions or for the best performance and support for larger accounts or longer periods of time, we recommend using FinOps hubs with Data Explorer.
 
 <br>
 
@@ -360,16 +376,6 @@ TODO: Consider the following ways to streamline this in the future:
 3. Create a hub configuration workbook to detect configuration issues.
 4. Consider renaming the main deployment file so it doesn't risk conflicting with other deployments.
 -->
-
-<br>
-
-## RerunFilesNotFound
-
-<sup>Severity: Critical</sup>
-
-Unable to locate previously ingested parquet files in the specified folder path.
-
-**Mitigation**: Confirm the folder path is the full path, including the **ingestion** container and not starting with or ending with a slash (**/**). Copy the path from the last successful **ingestion_ExecuteETL** pipeline run.
 
 <br>
 

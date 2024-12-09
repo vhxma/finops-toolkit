@@ -17,6 +17,7 @@ Explore the latest and greatest features and enhancements from the FinOps toolki
    <summary class="fs-2 text-uppercase">On this page</summary>
 
 - [🔄️ Unreleased](#️-unreleased)
+- [🪛 v0.7 Update 1](#-v07-update-1)
 - [🚚 v0.7](#-v07)
 - [🪛 v0.6 Update 1](#-v06-update-1)
 - [🚚 v0.6](#-v06)
@@ -44,15 +45,20 @@ Legend:
 🪛⬆️ Update
 🌱 Pre-release
 
+📗 FinOps guide
+🏦 FinOps hubs
+📊 Power BI reports
+📒 FinOps workbooks
+🔍 Optimization engine
+🖥️ PowerShell
+🦾 Bicep modules
+🌐 Open data
+
 ➕ Added
 ✏️ Changed
 🛠️ Fixed
 🚫 Deprecated
 🗑️ Removed
-
-📒 Workbook
-🏦 FinOps hubs
-🖥️ PowerShell
 -->
 
 ## 🔄️ Unreleased
@@ -62,16 +68,9 @@ Legend:
 
 > ➕ Added:
 >
-> 2. Auto-backfill – Backfill historical data from Microsoft Cost Management.
-> 3. Retention – Configure how long you want to keep Cost Management exports and normalized data in storage.
-> 4. ETL pipelile – Add support for parquet files created by Cost Management exports.
-> 5. Private endpoints support.
->    - Added private endpoints for storage account, Azure Data Explorer & Keyvault.
->    - Added managed virtual network & storage endpoint for Azure Data Factory Runtime.
->    - All data processing now happens within a vNet.
->    - Added param to disable external access to Azure Data Lake and Azure Data Explorer.
->    - Added param to specify subnet range of vnet - minumum size = /26
-> 6. Infrastructure encryption - Added an optional enableInfrastructureEncryption template parameter to support storage account infrastructure encryption.
+> 1. Auto-backfill – Backfill historical data from Microsoft Cost Management.
+> 1. Retention – Configure how long you want to keep Cost Management exports and normalized data in storage.
+> 1. ETL pipelile – Add support for parquet files created by Cost Management exports.
 
 📊 Power BI reports
 {: .fs-5 .fw-500 .mt-4 mb-0 }
@@ -89,26 +88,45 @@ Legend:
 > 1. Cost Management export modules for subscriptions and resource groups.
 >
 
+<br><a name="latest"></a>
+
+## 🪛 v0.7 Update 1
+
+📊 Power BI reports
+{: .fs-5 .fw-500 .mt-4 mb-0 }
+
+> ➕ Added:
+>
+> 1. Added experimental feature to populate missing prices/costs.
+>    - This feature requires Cost Management price sheet exports be created and configured in the same FinOps hub instance or storage path.
+>    - This feature performs a large join between cost and price datasets and will slow down data refresh times.
+>    - If you run into any issues with data at scale, please disable the parameter.
+>    - If you notice prices or costs that are not correct, please [submit an issue in GitHub](https://aka.ms/ftk/ideas). Do not file a support request.
+> 1. Added the Pricing units open dataset to support price sheet data cleanup.
+> 1. Added `PricingUnit` and `x_PricingBlockSize` columns to the **Prices** table.
+>
+> 🚫 Deprecated:
+>
+> 1. Cosmetic and informational transforms will be disabled by default in 0.8 and removed on or after June 1, 2025 to improve Power BI performance. This includes:
+>    - Support for FOCUS 1.0 preview. Please create new FOCUS 1.0 exports and backfill historical data.
+>    - Fixing `x_SkuTerm` for MCA so it's the number of months rather than a display string.
+>    - Tracking changes in the `x_SourceChanges` column.
+>    - Explaining why rows have no cost in the `x_FreeReason` column.
+>    - Creating `*Unique` name columns for resources, resource groups, subscriptions, and commitment discounts.
+
+<br>
+
+## 🚚 v0.7
+
+<sup>Released November 2024</sup>
+
 📗 FinOps guide
 {: .fs-5 .fw-500 .mt-4 mb-0 }
 
 > ✏️ Changed:
 >
 > 1. Added Enterprise App Patterns links resources to the architecting for the cloud section.
-
-🔍 Optimization engine
-{: .fs-5 .fw-500 .mt-4 mb-0 }
-
-> 🛠️ Fixed:
->
-> 1. Exports ingestion issues in cases where exports come with empty lines ([#998](https://github.com/microsoft/finops-toolkit/issues/998))
-> 1. Missing columns in EA savings plans exports ([#1026](https://github.com/microsoft/finops-toolkit/issues/1026))
-
-<br><a name="latest"></a>
-
-## 🚚 v0.7
-
-<sup>Released November 2024</sup>
+> 1. Update cost and unit of measuring handling in the [FOCUS conversion instructions](../_docs/focus/convert.md).
 
 📊 Power BI reports
 {: .fs-5 .fw-500 .mt-4 mb-0 }
@@ -119,10 +137,7 @@ Legend:
 >   1. Added partial support for OneLake URLs.
 >      - This is not fully tested. This is based on feedback about OneLake file paths being different. Additional changes may be needed to fully support Microsoft Fabric.
 >   1. Fix EffectiveCost for savings plan purchases to work around a bug in exported data.
-> - [Cost summary](../_reporting/power-bi/cost-summary.md)
->   1. Added KQL-based version that connects to FinOps hubs with Azure Data Explorer.
-> - [Rate optimization](../_reporting/power-bi/rate-optimization.md)
->   1. Added KQL-based version that connects to FinOps hubs with Azure Data Explorer.
+>   1. Added KQL-based version of the [Cost summary](../_reporting/power-bi/cost-summary.md), [Data ingestion](../_reporting/power-bi/data-ingestion.md), and [Rate optimization](../_reporting/power-bi/rate-optimization.md) reports that connect to FinOps hubs with Azure Data Explorer.
 >
 > ✏️ Changed:
 >
@@ -136,13 +151,10 @@ Legend:
 >      - x_DatasetType is now `x_SourceType`
 >      - x_DatasetVersion is now `x_SourceVersion`
 >      - x_AccountType is now `x_BillingAccountAgreement`
+>   3. Updated supported spend estimates in the Power BI documentation.
 
 🏦 FinOps hubs
 {: .fs-5 .fw-500 .mt-4 mb-0 }
-
-> ➕ Added:
-> 
-> 1. Infrastructure encryption - Added an optional enableInfrastructureEncryption template parameter to support storage account infrastructure encryption.
 
 <small>**Breaking change**</small>
 {: .label .label-red .pt-0 .pl-3 .pr-3 .m-0 }
@@ -152,12 +164,17 @@ Legend:
 > 1. Option to ingest data into an Azure Data Explorer cluster.
 > 1. Set missing reservation list and contracted prices/cost columns for EA and MCA accounts (Data Explorer only).
 >    - Requires the price sheet export to be configured.
-> 12. Fix EffectiveCost for savings plan purchases to work around a bug in exported data (Data Explorer only).
->    - The same fix was applied to Power BI reports for those not using Data Explorer. The underlying data has not changed however.
-> 3. Support for FOCUS 1.0r2 exports.
+> 1. Support for FOCUS 1.0r2 exports.
 >    - The 1.0r2 dataset only differs in date formatting. There are no functional differences compared to 1.0.
 >    - The 1.0r2 dataset is only needed when ingesting data into a system that requires date/time values to include seconds (for example, "2024-01-01T00:00:00Z" where the last "00" is seconds).
-
+> 1. Support for private endpoints via an optional template parameter.
+>    - Added private endpoints for storage account, Azure Data Explorer & Keyvault.
+>    - Added managed virtual network & storage endpoint for Azure Data Factory Runtime.
+>    - All data processing now happens within a virtual network.
+>    - Added param to disable external access to Azure Data Lake and Azure Data Explorer.
+>    - Added param to specify subnet range of virtual network - minimum size = /26
+> 1. Support for storage account infrastructure encryption.
+> 1. Published a [schema file](https://aka.ms/finops/hubs/settings-schema) for the hub settings.json file.
 >
 > ✏️ Changed:
 >
@@ -171,14 +188,19 @@ Legend:
 >    - For reservation recommendations, use "Recommendations".
 >    - For reservation transactions, use "Transactions".
 > 1. Renamed the `msexports_FileAdded` trigger to `msexports_ManifestAdded`.
+>
+> 🛠️ Fixed:
+>
+> 1. Fix EffectiveCost for savings plan purchases to work around a bug in exported data (Data Explorer only).
+>    - The same fix was applied to Power BI reports for those not using Data Explorer. The underlying data has not changed however.
 
-📒 Azure Monitor workbooks
+📒 FinOps workbooks
 {: .fs-5 .fw-500 .mt-4 mb-0 }
 
 > ➕ Added:
 >
 > - [Optimization workbook](../_optimize/workbooks/optimization/README.md)
->   1. On the Storagetab, included the **RSVaultBackup** tag in the list of non-idle disks.
+>   1. On the Storage tab, included the **RSVaultBackup** tag in the list of non-idle disks.
 >
 > 🛠️ Fixed:
 >
@@ -191,6 +213,14 @@ Legend:
 > - [Optimization workbook](../_optimize/workbooks/optimization/README.md)
 >   1. On the Database tab, removed the idle SQL databases query.
 >      - This query will be re-evaluated and added again in a future release.
+
+🔍 Optimization engine
+{: .fs-5 .fw-500 .mt-4 mb-0 }
+
+> 🛠️ Fixed:
+>
+> 1. Exports ingestion issues in cases where exports come with empty lines ([#998](https://github.com/microsoft/finops-toolkit/issues/998))
+> 1. Missing columns in EA savings plans exports ([#1026](https://github.com/microsoft/finops-toolkit/issues/1026))
 
 🌐 Open data
 {: .fs-5 .fw-500 .mt-4 mb-0 }
