@@ -1,7 +1,5 @@
 targetScope = 'subscription'
 param rgName string
-param readerRoleAssignmentGuid string = guid(subscription().subscriptionId, rgName)
-param contributorRoleAssignmentGuid string = guid(rgName)
 param projectLocation string
 
 @description('The base URI where artifacts required by this template are located')
@@ -26,6 +24,9 @@ param authenticationOption string = 'ManagedIdentity'
 @description('Base time for all automation runbook schedules.')
 param baseTime string = utcNow('u')
 param resourceTags object
+
+param readerRoleAssignmentGuid string = guid(subscription().subscriptionId, rgName, automationAccountName)
+param contributorRoleAssignmentGuid string = guid(rgName, automationAccountName)
 
 param roleReader string = '/subscriptions/${subscription().subscriptionId}/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7'
 
