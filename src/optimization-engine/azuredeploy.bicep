@@ -1,7 +1,5 @@
 targetScope = 'subscription'
 param rgName string
-param readerRoleAssignmentGuid string = guid(subscription().subscriptionId, rgName)
-param contributorRoleAssignmentGuid string = guid(rgName)
 param projectLocation string
 
 @description('The base URI where artifacts required by this template are located')
@@ -22,6 +20,9 @@ param userObjectId string
 param sqlAdminPrincipalType string = 'User'
 param cloudEnvironment string = 'AzureCloud'
 param authenticationOption string = 'ManagedIdentity'
+
+param readerRoleAssignmentGuid string = guid(subscription().subscriptionId, rgName, automationAccountName)
+param contributorRoleAssignmentGuid string = guid(rgName, automationAccountName)
 
 @description('Base time for all automation runbook schedules.')
 param baseTime string = utcNow('u')
